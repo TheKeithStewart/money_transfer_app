@@ -1,0 +1,12 @@
+<md-sidenav class="md-sidenav-left" data-md-component-id="left" data-md-is-locked-open="$mdMedia('gt-sm')" data-md-disable-backdrop
+  data-md-whiteframe="4">
+  <md-toolbar></md-toolbar>
+  <md-content>
+    <md-button class="md-raised md-primary" data-ng-click="vm.addAccount($event)">Add Account</md-button>
+    <md-input-container class="md-block" flex-gt-sm>
+      <label flex>Get Account:</label>
+      <input data-ng-model="vm.getAccountId">
+      <md-button class="md-raised md-primary" data-ng-click="vm.getAccount({ accountId: vm.getAccountId })">Submit</md-button>
+    </md-input-container>
+  </md-content>
+</md-sidenav>

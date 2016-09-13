@@ -1,0 +1,27 @@
+<md-dialog aria-label="transferMoney">
+  <form name="transferMoney" data-ng-submit="vm.transfer()">
+    <md-dialog-content>
+      <div data-layout="column" layout-padding>
+        <div data-layout-gt-sm="column">
+          <label>From Account:</label> {{vm.fromAccount.accountId}}
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>To Account:</label>
+            <md-select ng-model="vm.toAccount">
+              <md-option ng-value="option" ng-repeat="option in vm.accounts">
+                {{ option.accountId }}
+              </md-option>
+            </md-select>
+          </md-input-container>
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Amount:</label>
+            <input ng-model="vm.amount">
+          </md-input-container>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions>
+      <md-button data-ng-click="vm.cancel()">Cancel</md-button>
+      <md-button type="submit" class="md-primary md-raised">Transfer</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

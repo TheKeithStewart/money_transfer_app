@@ -1,0 +1,46 @@
+{
+  "name": "money_transfer_app",
+  "version": "1.0.0",
+  "description": "Component Based Angular 1.5 App",
+  "scripts": {
+    "build": "./node_modules/.bin/gulp build",
+    "start": "npm build && concurrent \"npm run watch\" \"npm run serve\"",
+    "serve": "live-server --open=./dist --mount=scripts:./dist/scripts/",
+    "watch": "./node_modules/.bin/gulp watch",
+    "watch:test": "./node_modules/.bin/gulp watch:test",
+    "typings": "./node_modules/.bin/tsd install",
+    "postinstall": "concurrent \"npm run typings\" \"npm run build\" ",
+    "test": "./node_modules/.bin/gulp test"
+  },
+  "author": "Keith Stewart",
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "concurrently": "~2.2.0",
+    "del": "^2.2.1",
+    "gulp": "~3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-order": "^1.1.1",
+    "gulp-typescript": "^2.13.6",
+    "gulp-util": "^3.0.7",
+    "jasmine-core": "^2.5.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.0",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-html-reporter": "^0.2.1",
+    "karma-junit-reporter": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "live-server": "^1.0.0",
+    "tsd": "^0.6.5"
+  },
+  "dependencies": {
+    "angular": "~1.5.8",
+    "angular-animate": "~1.5.8",
+    "angular-aria": "~1.5.8",
+    "angular-material": "~1.1.0-rc.5",
+    "angular-material-icons": "^0.7.1"
+  }
+}

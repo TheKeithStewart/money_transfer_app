@@ -1,0 +1,19 @@
+<md-dialog>
+  <form name="accountForm" data-ng-submit="vm.save()">
+    <md-dialog-content>
+      <div data-layout="column" layout-padding>
+        <div data-layout-gt-sm="row">
+          <md-input-container class="md-block" flex-gt-sm>
+            <label>Initial Balance:</label>
+            <input data-ng-model="vm.initialBalance">
+          </md-input-container>
+        </div>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions data-layout="row">
+      <md-button data-ng-click="vm.cancel()">Cancel</md-button>
+      <md-button type="submit" class="md-primary md-raised" data-ng-disabled="accountForm.$invalid">Save</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

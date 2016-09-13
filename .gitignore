@@ -1,0 +1,12 @@
+/node_modules
+
+*.log
+
+*.log.*
+
+/dist
+/temp
+/typings
+/tests/**/*
+
+/.vscode
