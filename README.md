@@ -31,6 +31,12 @@ To run tests continually as your are developing:
 npm run watch:test
 ```
 
+## Development Workflow
+
+The `src` directory contains all of the source code for the application.  When you have executed the `npm start` command, in addition to running the HTTP server to serve the web application from the `dist` folder, a series of Gulp tasks are kicked off to watch for changes to the files in the `src` folder and build them into the `dist` folder.  This allows you to develop on the TypeScript (.ts) files and have those automatically compiled into JavaScript and placed in the folder being served.  Also, any changes to HTML or CSS files are copied to the appropriate folder.
+
+In addition to this, if you would like to have your unit tests run automatically as your are developing you open another terminal window and execute `npm run watch:test`.  This will then execute all of your unit tests as well every time that you save a change to a file in the `src` directory.  Unit tests exist in files with the extension `.spec.ts`.
+
 ## Directory Structure
 
 Overview
