@@ -33,6 +33,8 @@ npm run watch:test
 
 ## Directory Structure
 
+Overview
+
   ├── dist                              - all of the compiled source code that comes out of the build process
   └── src                               - directory housing all source code
       ├── index.html                    - main index.html page
