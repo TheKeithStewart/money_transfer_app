@@ -1,9 +1,4 @@
-/*
- * CollabNet TeamForge(r)
- * Copyright 2007-2016 CollabNet, Inc. All rights reserved.
- * http://www.collab.net
- */
-module app {
+module app.account {
   'use strict';
 
   export class Account {

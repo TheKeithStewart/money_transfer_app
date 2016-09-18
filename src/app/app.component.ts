@@ -1,8 +1,3 @@
-/*
- * CollabNet TeamForge(r)
- * Copyright 2007-2016 CollabNet, Inc. All rights reserved.
- * http://www.collab.net
- */
 module app {
   'use strict';
 
@@ -10,10 +5,10 @@ module app {
    * AppController
    */
   class AppController {
-    accounts: Array<Account> = [];
+    accounts: Array<account.Account> = [];
 
-    static $inject = ['app.AccountService', 'app.notificationService', '$mdDialog'];
-    constructor(private accountService: AccountService, private notificationService: NotificationService, private $mdDialog: ng.material.IDialogService) {
+    static $inject = ['app.account.AccountService', 'app.core.notificationService', '$mdDialog', '$mdMedia'];
+    constructor(private accountService: account.AccountService, private notificationService: core.NotificationService, private $mdDialog: ng.material.IDialogService, private $mdMedia: ng.material.IMedia) {
       this.accounts = this.accountService.accounts;
     }
 
@@ -34,6 +29,20 @@ module app {
         }
       }, () => {
         this.notificationService.openToast('No account with id \'' + accountId + '\' was found');
+      });
+    }
+
+    addAccount($event): void {
+      let useFullScreen = (this.$mdMedia('sm') || this.$mdMedia('xs'));
+
+      this.$mdDialog.show({
+        templateUrl: '/dist/app/account/addAccount.html',
+        parent: angular.element(document.body),
+        targetEvent: $event,
+        controller: account.AddAccount,
+        controllerAs: 'vm'
+      }).then((accountInfo: account.IAddAccountResponse) => {
+        this.createAccount(accountInfo.initialBalance);
       });
     }
   }

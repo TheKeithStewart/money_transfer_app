@@ -1,8 +1,8 @@
 <div data-layout="row" style="height: 100%">
-  <side-column data-layout="vertical" data-create-account="vm.createAccount(initialBalance)" data-get-account="vm.getAccount(accountId)"></side-column>
+  <side-column data-layout="vertical" data-create-account="vm.createAccount(initialBalance)" data-get-account="vm.getAccount(accountId)" data-add-account="vm.addAccount($event)"></side-column>
 
   <div data-layout="column" flex>
-    <toolbar></toolbar>
+    <header></header>
     <md-content flex id="content">
       <p data-ng-if="!vm.accounts.length">No accounts created yet.</p>
 

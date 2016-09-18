@@ -1,9 +1,4 @@
-/*
- * CollabNet TeamForge(r)
- * Copyright 2007-2016 CollabNet, Inc. All rights reserved.
- * http://www.collab.net
- */
-module app {
+module app.account {
   'use strict';
   
   describe('service: AccountService:', () => {
@@ -15,7 +10,7 @@ module app {
     });
     
     beforeEach(() => {
-      inject(['$rootScope', 'app.AccountService', (_$rootScope_: ng.IRootScopeService, AccountService: AccountService) => {
+      inject(['$rootScope', 'app.account.AccountService', (_$rootScope_: ng.IRootScopeService, AccountService: AccountService) => {
         $scope = _$rootScope_.$new();
         accountService = AccountService;
       }]);

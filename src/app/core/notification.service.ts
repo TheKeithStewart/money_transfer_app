@@ -1,9 +1,4 @@
-/*
- * CollabNet TeamForge(r)
- * Copyright 2007-2016 CollabNet, Inc. All rights reserved.
- * http://www.collab.net
- */
-module app {
+module app.core {
   'use strict';
   
   /**
@@ -25,6 +20,6 @@ module app {
     }
   }
   
-  angular.module('app')
-    .service('app.notificationService', NotificationService);
+  angular.module('app.core')
+    .service('app.core.notificationService', NotificationService);
 }

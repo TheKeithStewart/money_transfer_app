@@ -1,9 +1,4 @@
-/*
- * CollabNet TeamForge(r)
- * Copyright 2007-2016 CollabNet, Inc. All rights reserved.
- * http://www.collab.net
- */
-module app {
+module app.account {
   'use strict';
 
   /**
@@ -15,9 +10,9 @@ module app {
 
   }
 
-  angular.module('app')
+  angular.module('app.account')
     .component('accountCard', {
-      templateUrl: 'app/accountCard.html',
+      templateUrl: 'app/account/accountCard.html',
       bindings: {
         account: '<'
       },
