@@ -1,6 +1,9 @@
 {
   "name": "money_transfer_app",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.5.0"
+  },
   "description": "Component Based Angular 1.5 App",
   "scripts": {
     "build": "./node_modules/.bin/gulp build",
