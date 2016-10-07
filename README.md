@@ -1,4 +1,4 @@
-# ActionMoneyTransfer
+# money_transfer_app
 
 ## Prerequisites
 
