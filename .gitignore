@@ -15,3 +15,5 @@ js/reveal.min.js
 dist
 typings
 tests
+
+*.log.*
