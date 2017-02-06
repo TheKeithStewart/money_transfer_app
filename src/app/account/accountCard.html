@@ -1,6 +1,7 @@
 <md-card>
   <md-card-content>
     <h3>{{vm.account.accountId}}</h3>
+    <p>Status: {{ vm.isHighBalance() | checkmark }}
     <p>Balance: {{vm.account.balance | currency}}</p>
   </md-card-content>
 </md-card>
