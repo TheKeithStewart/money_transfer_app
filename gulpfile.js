@@ -1,5 +1,3 @@
-/// <reference path="./typings/tsd.d.ts" />
-
 var config = require('./gulp.config')();
 
 var gulp = require('gulp');
@@ -38,7 +36,7 @@ gulp.task('build:test', ['clean-tests'], function() {
 
   return gulp.src([
     config.srcFiles + '**/*.ts',
-    'typings/**/*.d.ts'
+    'node_modules/@types/**/*.d.ts'
   ]).pipe($.typescript(tsProject))
     .js.pipe(gulp.dest(config.testDir + 'build'));
 });
@@ -121,7 +119,7 @@ gulp.task('scripts-typescript', ['clean-scripts-typescript'], function () {
   return gulp.src([
     config.srcFiles + '**/*.ts',
     '!' + config.srcDir + '**/*.spec.ts',
-    'typings/**/*.d.ts'
+    'node_modules/@types/**/*.d.ts'
   ]).pipe($.typescript(tsProject))
     .js.pipe(gulp.dest(config.distDir));
 });
