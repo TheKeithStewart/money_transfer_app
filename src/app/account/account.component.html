@@ -1,0 +1,25 @@
+<div data-layout="row" style="height: 100%">
+
+  <side-column data-layout="vertical" data-create-account="vm.createAccount(initialBalance)" data-get-account="vm.getAccount(accountId)"
+    data-add-account="vm.addAccount($event)"></side-column>
+    
+    <div data-layout="column" flex>
+
+      <navbar></navbar>
+      
+      <md-content flex id="content">
+        <p data-ng-if="!vm.accounts.length">No accounts created yet.</p>
+
+        <div data-layout-padding data-ng-if="vm.accounts.length">
+          <md-autocomplete data-md-search-text="vm.searchText" data-md-items="account in vm.accounts | filter:vm.searchText" data-md-item-text="account.accountId"
+            data-md-min-length="1" data-placeholder="filter">
+            <md-item-template>
+              <span data-md-highlight-text="vm.searchText" md-highlight-flags="^i">{{account.accountId}}</span>
+            </md-item-template>
+            <md-not-found>No accounts matching "{{vm.searchText}}" were found.</md-not-found>
+            </md-autocomplete>
+        </div>
+        <account-card data-ng-repeat="account in vm.accounts | filter:vm.searchText" data-account="account"></account-card>
+      </md-content>
+    </div>
+</div>

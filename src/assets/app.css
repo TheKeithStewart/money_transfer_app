@@ -26,3 +26,7 @@ md-toolbar .d-toolbar-tools h1 {
 md-toast.md-fail-toast-theme .md-toast-content {
   background-color: red;
 }
+
+.fill-space {
+  flex: 1 1 auto;
+}

@@ -8,6 +8,15 @@ module app {
         .accentPalette('red');
       $mdThemingProvider.theme('success-toast');
       $mdThemingProvider.theme('fail-toast');
+    })
+    .config(($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider) => {
+      $routeProvider.when('/home', {
+        template: '<home></home>'
+      }).when('/account', {
+        template: '<account></account>'
+      }).otherwise({
+        redirectTo: '/home'
+      });
     });
 
 }

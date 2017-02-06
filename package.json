@@ -20,6 +20,7 @@
     "@types/angular": "^1.6.4",
     "@types/angular-material": "^1.1.44",
     "@types/angular-mocks": "^1.5.9",
+    "@types/angular-route": "^1.3.3",
     "@types/gulp": "^3.8.32",
     "@types/jasmine": "^2.5.41",
     "@types/jquery": "^2.0.40",
@@ -53,6 +54,7 @@
     "angular-animate": "~1.5.8",
     "angular-aria": "~1.5.8",
     "angular-material": "~1.1.0-rc.5",
-    "angular-material-icons": "^0.7.1"
+    "angular-material-icons": "^0.7.1",
+    "angular-route": "^1.6.1"
   }
 }

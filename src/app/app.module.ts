@@ -7,7 +7,8 @@ module app {
     'app.core',
 
     'ngMaterial',
-    'ngMdIcons'
+    'ngMdIcons',
+    'ngRoute'
   ]);
 
 }
