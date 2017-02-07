@@ -12,7 +12,7 @@ module app {
 
   angular.module('app')
     .component('app', {
-      templateUrl: 'app/app.html',
+      templateUrl: 'dist/app/app.html',
       bindings: {
 
       },

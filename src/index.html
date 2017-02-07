@@ -9,19 +9,51 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <base href="/dist">
+
   <title>AccountService</title>
 
-  <!-- inject:css -->
-  <!-- endinject -->
+  <link rel="stylesheet" href="/dist/assets/angular-material-icons.css">
+  <link rel="stylesheet" href="/dist/assets/angular-material.min.css">
+  <link rel="stylesheet" href="/dist/assets/app.css">
 
+  <script src="/dist/scripts/angular.min.js"></script>
+  <script src="/dist/scripts/angular-animate.min.js"></script>
+  <script src="/dist/scripts/angular-aria.min.js"></script>
+  <script src="/dist/scripts/angular-material-icons.min.js"></script>
+  <script src="/dist/scripts/angular-material.min.js"></script>
+  <script src="/dist/scripts/angular-route.min.js"></script>
+  <script src="/dist/app/account/account.module.js"></script>
+  <script src="/dist/app/app.module.ajs.js"></script>
+  <script src="/dist/app/core/core.module.js"></script>
+  <script src="/dist/app/layout/layout.module.js"></script>
+  <script src="/dist/app/account/account.component.js"></script>
+  <script src="/dist/app/account/account.model.js"></script>
+  <script src="/dist/app/account/account.service.js"></script>
+  <script src="/dist/app/account/accountCard.component.js"></script>
+  <script src="/dist/app/account/addAccount.js"></script>
+  <script src="/dist/app/app.component.js"></script>
+  <script src="/dist/app/app.config.js"></script>
+  <script src="/dist/app/core/checkmark.filter.js"></script>
+  <script src="/dist/app/core/notification.service.js"></script>
+  <script src="/dist/app/home/home.component.js"></script>
+  <script src="/dist/app/layout/header.component.js"></script>
+  <script src="/dist/app/layout/navbar.component.js"></script>
+  <script src="/dist/app/layout/sideColumn.component.js"></script>
+
+  <script src="/dist/scripts/shim.min.js"></script>
+  <script src="/dist/scripts/zone.js"></script>
+  <script src="/dist/scripts/system.src.js"></script>
+  <script src="/dist/systemjs.config.js"></script>
+  <script>
+    System.import('/dist/main');
+  </script>
+  
 </head>
 
-<body data-ng-app="app">
+<body>
 
   <app>Loading...</app>
-
-  <!-- inject:js -->
-  <!-- endinject -->
 
 </body>
 

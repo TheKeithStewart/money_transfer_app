@@ -11,7 +11,7 @@ module app {
 
   angular.module('app')
     .component('home', {
-      templateUrl: 'app/home/home.component.html',
+      templateUrl: 'dist/app/home/home.component.html',
       bindings: {
 
       },

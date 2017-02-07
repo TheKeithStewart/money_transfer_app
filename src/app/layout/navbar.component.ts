@@ -12,7 +12,7 @@ module app.layout {
   
   angular.module('app.layout')
     .component('navbar', {
-      templateUrl: 'app/layout/navbar.component.html',
+      templateUrl: 'dist/app/layout/navbar.component.html',
       bindings: {
         
       },

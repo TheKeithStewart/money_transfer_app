@@ -1,14 +1,13 @@
-module app {
-  'use strict';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { UpgradeModule } from '@angular/upgrade/static';
 
-  angular.module('app', [
-    'app.account',
-    'app.layout',
-    'app.core',
-
-    'ngMaterial',
-    'ngMdIcons',
-    'ngRoute'
-  ]);
-
+@NgModule({
+  imports: [
+    BrowserModule,
+    UpgradeModule
+  ],
+})
+export class AppModule {
+  ngDoBootstrap() {}
 }

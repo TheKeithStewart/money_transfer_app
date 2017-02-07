@@ -12,7 +12,7 @@ module app.layout {
 
   angular.module('app.layout')
     .component('sideColumn', {
-      templateUrl: 'app/layout/sideColumn.html',
+      templateUrl: 'dist/app/layout/sideColumn.html',
       bindings: {
         createAccount: '&',
         getAccount: '&',

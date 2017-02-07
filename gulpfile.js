@@ -10,25 +10,7 @@ var karmaServer = require('karma').Server;
  */
 gulp.task('build', ['templates', 'scripts', 'styles'], function () {
   return gulp.src(config.srcDir + 'index.html')
-    .pipe(inject('assets/**/*.css'))
-    .pipe(inject('**/*.js', null, config.jsOrder))
     .pipe(gulp.dest(config.distDir));
-
-  function inject(path, name, order) {
-    var pathGlob = config.distDir + path;
-    var options = {};
-    if (name) {
-      options.name = name;
-    }
-
-    return $.inject(orderSrc(pathGlob, order), options);
-  }
-
-  function orderSrc(src, order) {
-    return gulp
-      .src(src)
-      .pipe($.if(order, $.order(order)));
-  }
 });
 
 gulp.task('build:test', ['clean-tests'], function() {
@@ -93,7 +75,7 @@ gulp.task('clean-templates', function () {
   return clean(files);
 });
 
-gulp.task('scripts', ['scripts-typescript', 'scripts-thirdparty'], function () {
+gulp.task('scripts', ['scripts-typescript', 'scripts-thirdparty', 'scripts-systemjs'], function () {
 
 });
 
@@ -109,6 +91,11 @@ gulp.task('clean-scripts-thirdparty', function () {
   return clean(files);
 });
 
+gulp.task('scripts-systemjs', function () {
+  return gulp.src([config.srcDir + 'systemjs.config.js', config.srcDir + 'systemjs.config.extras.js'])
+    .pipe(gulp.dest(config.distDir));
+});
+
 /**
  * Transpiles TypeScript code and moves the compiled JavaScript into the temp directory
  * @return {Stream}
@@ -117,6 +104,7 @@ gulp.task('scripts-typescript', ['clean-scripts-typescript'], function () {
   var tsProject = $.typescript.createProject(config.srcDir + 'tsconfig.json');
 
   return gulp.src([
+    config.srcDir + 'main.ts',
     config.srcFiles + '**/*.ts',
     '!' + config.srcDir + '**/*.spec.ts',
     'node_modules/@types/**/*.d.ts'

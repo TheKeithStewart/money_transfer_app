@@ -16,7 +16,7 @@ module app.account {
 
   angular.module('app.account')
     .component('accountCard', {
-      templateUrl: 'app/account/accountCard.html',
+      templateUrl: 'dist/app/account/accountCard.html',
       bindings: {
         account: '<'
       },

@@ -49,7 +49,7 @@ module app.account {
 
   angular.module('app.account')
     .component('account', {
-      templateUrl: 'app/account/account.component.html',
+      templateUrl: 'dist/app/account/account.component.html',
       bindings: {
 
       },

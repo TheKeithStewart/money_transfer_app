@@ -12,7 +12,7 @@ module app.layout {
   
   angular.module('app.layout')
     .component('header', {
-      templateUrl: 'app/layout/header.html',
+      templateUrl: 'dist/app/layout/header.html',
       bindings: {
         
       },
