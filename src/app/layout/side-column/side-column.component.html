@@ -1,0 +1,14 @@
+<md-sidenav-container>
+
+  <md-sidenav mode="side" opened="true">
+    <button md-raised-button color="primary" (click)="onAddAccount()">Add Account</button>
+    <div>
+      <label>Get Account:</label>
+      <md-input-container>
+        <input md-input [(ngModel)]="getAccountId">
+      </md-input-container>
+      <button md-raised-button (click)="onGetAccount(getAccountId)">Submit</button>
+    </div>
+  </md-sidenav>
+
+</md-sidenav-container>

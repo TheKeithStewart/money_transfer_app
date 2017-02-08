@@ -30,3 +30,8 @@ md-toast.md-fail-toast-theme .md-toast-content {
 .fill-space {
   flex: 1 1 auto;
 }
+
+/* This is here temporarily until the parent component of side-column (account) is upgraded.  It then can be moved into the styles for that component. */
+side-column {
+  min-height: 300px;
+}
